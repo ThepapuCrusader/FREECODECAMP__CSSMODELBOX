@@ -3,6 +3,7 @@
   height: 600px;
   background-color: #4d0f00;
   overflow: hidden; /* Controla el comportamiento del contenido de un elemento hijo cuando este supera el tamaño de su caja/elemento padre, en esta instancia ese exceso se oculta mediante "hidden" */
+  filter: blur(2px); /* Permite aplicar efectos graficos a un elemento, con "blur" le damos un desenfoque a este elemento (2px)*/
 }
 
 .frame {
@@ -17,11 +18,34 @@
   height: 150px;
   background-color: #efb762;
   margin: 20px auto;
+  box-shadow: 0 0 3px 3px #efb762; /* Permite crear efectos de sombra, sintaxis = [offset-x] [offset-y] [blur] [spread] [color] | inset;  */
+  /* 'offset-x' se refiere a la posicion horizontal mientras que 'offset-y' a la vertical, 'blur' el desenfoque, 'spread' el radio de expansion, 'color' y por ultimo 'inset'
+  propiedad opcional que invierte la sombra, dando la idea de que el contenido estuviera hacia adentro */
+  border-radius: 9px;
+  transform: rotate(-0.6deg); /* Permite modifcar las coordenadas de un elemento, en este caso "rotate" gira el elemento 6 grados a la izquierda */
 }
 
 .two {
   width: 475px;
   height: 200px;
   background-color: #8f0401;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 3px 3px #8f0401;
+  border-radius: 8px 10px; /* redonde las esquinas superior izquierda e inferior derecha en 8px luego redondea las esquinas superior derecha e inferior izquierda en 10px */
+  transform: rotate(0.4deg);
+}
+
+.one, .two {
+  filter: blur(1px);
+}
+
+.three {
+  width: 91%;
+  height: 28%;
+  background-color: #b20403;
   margin: auto;
+  filter: blur(2px);
+  box-shadow: 0 0 5px 5px #b20403;
+  border-radius: 30px 25px 60px 12px; /* Border-radius acepta 4 valores los cuales son: esquina superior izquierda, esquina superior derecha, esquina inferior derecha y esquina inferior izquierda  */
+  transform: rotate(-0.2deg);
 }
