@@ -2,7 +2,7 @@
   width: 500px;
   height: 600px;
   background-color: #4d0f00;
-  padding: 1px;
+  overflow: hidden; /* Controla el comportamiento del contenido de un elemento hijo cuando este supera el tamaño de su caja/elemento padre, en esta instancia ese exceso se oculta mediante "hidden" */
 }
 
 .frame {
@@ -17,4 +17,8 @@
   height: 150px;
   background-color: #efb762;
   margin: 20px auto;
+}
+
+.two {
+  
 }
